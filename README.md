@@ -202,5 +202,5 @@ Após a confirmação, o voto será computado automaticamente no sistema.
 
 ## Modelagem
 **Diagrama de Casos de Uso**
-
+![image alt](https://github.com/francisquinho777/projeto_A3_Lucena/blob/7d8293197287c2c93218f14f2c9787da0bb74a76/a3voz/diagrama1.png)
 
