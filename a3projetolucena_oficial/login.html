@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+
+    <style>
+        body {
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #fff;
+            width: 350px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #15df30;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #12c528;
+        }
+
+        #erro {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .cadastro-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #007bff;
+            cursor: pointer;
+        }
+        
+        .cadastro-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Entrar</h2>
+
+        <input type="text" id="usuario" placeholder="Usuário">
+        <input type="password" id="senha" placeholder="Senha">
+        <button onclick="logar()">Entrar</button>
+
+        <p id="erro"></p>
+
+        <!-- Link de cadastro -->
+        <a href="cadastro.html" class="cadastro-link">Não tenho cadastro</a>
+    </div>
+
+    <script>
+        function logar() {
+            let user = document.getElementById("usuario").value;
+            let pass = document.getElementById("senha").value;
+            let msg = document.getElementById("erro");
+
+            if (user === "wedsonsilva" && pass === "123456") {
+                msg.style.color = "green";
+                msg.innerHTML = "✅ Login feito com sucesso! Redirecionando...";
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 1200);
+            } else {
+                msg.style.color = "red";
+                msg.innerHTML = "❌ Usuário ou senha incorretos!";
+            }
+        }
+
+        document.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                logar();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+<script>
+    function logar() {
+        let user = document.getElementById("usuario").value;
+        let pass = document.getElementById("senha").value;
+        let msg = document.getElementById("erro");
+
+            if (user === "admin" && pass === "654321") {
+            msg.style.color = "green";
+            msg.innerHTML = "👑 Bem-vindo, Administrador! Redirecionando...";
+
+            setTimeout(() => {
+                window.location.href = "admin.html";
+            }, 1200);
+        }
+       if (user === "admin" && pass === "654321") {
+    localStorage.setItem("logado", "admin");
+    msg.style.color = "green";
+    msg.innerHTML = "👑 Bem-vindo, Administrador! Redirecionando...";
+    setTimeout(() => window.location.href = "admin.html", 1200);
+} 
+else if (user === "wedsonsilva" && pass === "123456") {
+    localStorage.setItem("logado", "usuario");
+    msg.style.color = "green";
+    msg.innerHTML = "✅ Login feito com sucesso! Redirecionando...";
+    setTimeout(() => window.location.href = "index.html", 1200);
+}
+
+    }
+
+    // Permitir LOGIN com ENTER
+    document.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            logar();
+        }
+    });
+</script>
+
+</body>
+</html>

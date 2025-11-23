@@ -1,0 +1,44 @@
+#testimonials{
+    min-height: calc(100vh - 91px);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 48px;
+}
+
+#voluntarios_chef{
+width: 300px;
+height: auto;
+}
+
+#testimonials .section-submite{
+font-size: 3rem;
+}
+#testimonials_content{
+    width: 50%;
+}
+
+#feedbacks{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.feedback{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-avatar {
+  width: 150px;   /* largura da imagem */
+  height: auto;   /* altura proporcional para não distorcer */
+  border-radius: 100%; /* deixa redonda (se quiser estilo avatar) */
+}
+
+

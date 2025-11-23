@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/styles/voto.css">
+  <title>Votação Popular</title>
+
+ 
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="src/images/Logolucena (1).png" alt="logo">
+    </a>
+    <nav>
+      <a href="index.html">Página Principal</a>
+    </nav>
+  </header>
+
+  <section id="votacao-section">
+    <h1>Escolha o projeto social que você quer para a cidade</h1>
+
+    <div id="dishes">
+      <div class="dish">
+        <img src="src/images/saude (1).png" alt="">
+        <h3>Saúde e bem-estar</h3>
+        <button onclick="votar('Saúde')">Votar</button>
+      </div>
+
+      <div class="dish">
+        <img src="src/images/4221310 (1).png" alt="">
+        <h3>Limpeza e melhorias</h3>
+        <button onclick="votar('Limpeza')">Votar</button>
+      </div>
+
+      <div class="dish">
+        <img src="src/images/livro (1).png" alt="">
+        <h3>Educação e cultura</h3>
+        <button onclick="votar('Educação')">Votar</button>
+      </div>
+
+      <div class="dish">
+        <img src="src/images/—Pngtree—vector boxing icon_4164720 (1).png" alt="">
+        <h3>Esporte e lazer</h3>
+        <button onclick="votar('Esporte')">Votar</button>
+      </div>
+
+      <div class="dish">
+        <img src="src/images/14640470-icone-de-linha-de-brecho-vetor (1).jpg" alt="">
+        <h3>Ação social e cidadania</h3>
+        <button onclick="votar('Brécho')">Votar</button>
+      </div>
+    </div>
+  </section>
+
+ <script>
+  // BLOQUEIA SE NÃO ESTIVER LOGADO
+if (!localStorage.getItem("logado")) {
+    alert("Você precisa estar logado para votar!");
+    window.location.href = "login.html";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  
+  // Se já votou, não deixa votar novamente
+  // if(localStorage.getItem("votou") === "sim") {
+  //   document.getElementById("votacao-section").innerHTML = `
+  //     <h2 style='text-align:center;margin-top:100px;'>
+  //       Você já votou! Obrigado por participar! 🙌
+  //     </h2>
+  //   `;
+  //   setTimeout(() => {
+  //     window.location.href = "index.html";
+  //   }, 2000);
+  //   return;
+  // }
+
+});
+
+// Função quando clicar no botão
+function votar(categoria) {
+
+  // Salva que já votou
+  localStorage.setItem("votou", "sim");
+
+  // Mostra mensagem
+  document.getElementById("votacao-section").innerHTML = `
+    <h2 style='text-align:center;margin-top:100px;'>
+      🎉 Obrigado pelo seu voto em <span style="color:green;">${categoria}</span>!
+    </h2>
+  `;
+
+  // Redireciona após 2 segundos
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 2000);
+}
+</script>
+
+
+</body>
+</html>

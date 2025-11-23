@@ -1,0 +1,124 @@
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+}
+
+.navbar a:hover {
+    color: #15ff00;
+    border-bottom: 0.1rem solid #15ff00;
+    padding-bottom: 0.5rem;
+    font-size: 1.6rem;
+
+}
+
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    header nav a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    header nav a:hover {
+      color: #15ff00;
+      border-bottom: 2px solid #15ff00;
+    }
+
+    /* seção da votação */
+    #votacao-section {
+      padding: 120px 30px 50px; /* 120px pra não ficar escondido atrás do header */
+      text-align: center;
+    }
+
+    #votacao-section h1 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    /* área dos "dishes" */
+    #dishes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .dish {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .dish:hover {
+      background-color: #e8ffe8;
+      transform: scale(1.03);
+    }
+
+    .dish img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .dish h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: rgb(6, 240, 18);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #31c724;
+    }
+.btn-default:hover {
+    background-color: #31c724;
+}
+.dish:hover {
+    background-color: rgb(140, 196, 140);
+}
