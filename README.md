@@ -1,6 +1,6 @@
  
 <div style="display: flex; align-items: center; justify-content: space-between;">
-  <img src="https://github.com/francisquinho777/projeto_A3_Lucena/blob/533857d9b24d78d695f6eb0f8dc961af9f5d3fe0/a3voz/logofpb.png" alt="FPB Logo" width="120">
+  <img src="https://github.com/francisquinho777/projeto_A3_Lucena/blob/533857d9b24d78d695f6eb0f8dc961af9f5d3fe0/a3voz/logofpb.png" alt="FPB Logo" width="200">
 
   <div style="text-align: center; width: 100%;">
     <p><strong>Wedson Francisco da Silva</strong> </p>
